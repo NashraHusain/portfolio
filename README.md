@@ -29,5 +29,5 @@ A modern, responsive portfolio website built to showcase my professional experie
 
 ## 🤝 Contact
 - **GitHub:** [@NashraHusain](https://github.com/NashraHusain)
-- **Email:** [nashrakashaf@gmial.com]
+- **Email:** nashrakashaf@gmial.com
 - **Location:** Amravati, Maharashtra
