@@ -1,5 +1,3 @@
-// script.js
-// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -9,7 +7,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar scroll effect
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
     if (window.scrollY > 100) {
@@ -19,7 +16,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Intersection Observer for fade-in animations
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -32,28 +28,80 @@ document.querySelectorAll('.skill-card, .project-card, .timeline-content').forEa
     observer.observe(el);
 });
 
-// Certificate Modal Functionality
 const certModal = document.getElementById('certModal');
 const modalImg = document.getElementById('certImg');
 const captionText = document.getElementById('certCaption');
 
 const certImages = {
-    cert1: { src: 'https://via.placeholder.com/800x600?text=Front+End+Development+Cert', caption: 'Introduction to Front End Development - Simplilearn SkillUp' },
-    cert2: { src: 'https://via.placeholder.com/800x600?text=AI+Tools+Workshop+Cert', caption: 'AI Tools Workshop - Be10x' },
-    cert3: { src: 'https://via.placeholder.com/800x600?text=Python+Cert', caption: 'Python Programming Language - JK Innovative Pvt. Ltd.' },
-    cert4: { src: 'https://via.placeholder.com/800x600?text=Advanced+Java+Cert', caption: 'Advanced Java Programming - JK Innovative Pvt. Ltd.' },
-    cert5: { src: 'https://via.placeholder.com/800x600?text=Generative+AI+Cert', caption: 'AI for Students: Build Your Own Generative AI Model - NxtWave' },
-    cert6: { src: 'https://via.placeholder.com/800x600?text=Microsoft+AI+Cert', caption: 'Microsoft AI Skills Challenge Completion - Microsoft' },
-    cert7: { src: 'https://via.placeholder.com/800x600?text=C%2B%2B+Cert', caption: 'C++ Programming Language - Padhmashri Computer Institute' },
-    cert8: { src: 'https://via.placeholder.com/800x600?text=EUPHORIA+Coordinator+Cert', caption: 'Contributing as a Coordinator - EUPHORIA 2K24' },
-    cert9: { src: 'https://via.placeholder.com/800x600?text=LPF+Scholar+Cert', caption: 'LPF Scholar (Lila Girl 2021) - Lila Poonawalla Foundation' },
-    cert10: { src: 'https://via.placeholder.com/800x600?text=Best+Performance+Cert', caption: 'Award for Best Performance in Class 12 - Knowledge Hub Coaching Classes' }
+    'cert1': { 
+        src: 'frontend_Certificate.pdf', 
+        caption: 'Introduction to Front End Development - Simplilearn' 
+    },
+    'cert2': { 
+        src: 'be10x_cert.jpeg', 
+        caption: 'AI Tools Workshop - Be10x' 
+    },
+    'cert3': { 
+        src: 'python_cert.jpg', 
+        caption: 'Python Programming Language - JK Innovative' 
+    },
+    'cert4': { 
+        src: 'java_cert.jpg', 
+        caption: 'Advanced Java Programming - JK Innovative' 
+    },
+    'cert5': { 
+        src: 'ai_for_student.pdf', 
+        caption: 'AI for Students: Build Your Own Generative AI Model - NxtWave' 
+    },
+    'cert6': { 
+        src: 'micro_ai.pdf', 
+        caption: 'Microsoft AI Skills Challenge Completion - Microsoft' 
+    },
+    'cert7': { 
+        src: 'c++_nashra_cert.jpg', 
+        caption: 'C++ Programming Language - Padhmashri Computer Institute' 
+    },
+    'cert8': { 
+        src: 'euphoria_cert.jpeg', 
+        caption: 'Award: Contributing as a Coordinator - College Fest ‘EUPHORIA 2K24’' 
+    },
+    'cert9': { 
+        src: 'lpf_scholar_cert.jpeg', 
+        caption: 'LPF Scholar (Lila Girl 2021) - LPF (Lila Poonawalla Foundation)' 
+    },
+    'cert10': { 
+        src: '12th_cert.jpeg', 
+        caption: 'Award for Best Performance in Class 12 - Knowledge Hub Coaching Classes' 
+    },
 };
 
 function openCertModal(certId) {
+    const cert = certImages[certId];
+    if (!cert) return;
+
     certModal.style.display = 'block';
-    modalImg.src = certImages[certId].src;
-    captionText.innerHTML = certImages[certId].caption;
+    captionText.innerHTML = cert.caption;
+
+    if (cert.src.toLowerCase().endsWith('.pdf')) {
+        
+        modalImg.style.display = 'none';
+        let pdfViewer = document.getElementById('certPdfViewer');
+        if (!pdfViewer) {
+            pdfViewer = document.createElement('iframe');
+            pdfViewer.id = 'certPdfViewer';
+            pdfViewer.style.width = '100%';
+            pdfViewer.style.height = '400px';
+            modalImg.parentNode.insertBefore(pdfViewer, captionText);
+        }
+        pdfViewer.src = cert.src;
+        pdfViewer.style.display = 'block';
+    } else {
+        if (document.getElementById('certPdfViewer')) {
+            document.getElementById('certPdfViewer').style.display = 'none';
+        }
+        modalImg.style.display = 'block';
+        modalImg.src = cert.src;
+    }
 }
 
 function closeCertModal() {
@@ -66,14 +114,13 @@ const resumeIframe = document.getElementById('resumeIframe');
 
 function openResumeModal() {
     resumeModal.style.display = 'block';
-    resumeIframe.src = 'resume.pdf'; // Reload to ensure it displays
+    resumeIframe.src = 'nashra_resume.pdf'; 
 }
 
 function closeResumeModal() {
     resumeModal.style.display = 'none';
 }
 
-// Close modals on outside click
 window.onclick = function(event) {
     if (event.target == certModal) {
         closeCertModal();
@@ -83,7 +130,6 @@ window.onclick = function(event) {
     }
 }
 
-// Close modals on Escape key
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         closeCertModal();
@@ -91,13 +137,12 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-// Touch/swipe support for mobile modal close (optional enhancement)
 let startY;
 [certModal, resumeModal].forEach(modal => {
     modal.addEventListener('touchstart', e => startY = e.touches[0].clientY);
     modal.addEventListener('touchmove', e => {
         const currentY = e.touches[0].clientY;
-        if (startY - currentY > 50) { // Swipe up to close
+        if (startY - currentY > 50) {
             if (modal.style.display === 'block') {
                 modal.style.display = 'none';
             }
