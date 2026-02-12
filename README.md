@@ -1,4 +1,4 @@
-# Portfolio | Nashra Husain
+# Portfolio | Nashra Kashaf Husain
 
 A modern, responsive portfolio website built to showcase my professional experience as a Full-Stack Developer and my personal projects.
 
@@ -22,12 +22,12 @@ A modern, responsive portfolio website built to showcase my professional experie
 * **Personal Portfolio:** This project! Featuring a sleek dark mode UI, custom animations, and mobile-first design.
 
 ## 🔧 Features
-- **Responsive Design:** Optimized for all screen sizes (Mobile, Tablet, Desktop).
+- **Responsive Design:** Optimised for all screen sizes (Mobile, Tablet, Desktop).
 - **Dynamic Animations:** Custom `fadeUp` and hover effects for better UX.
 - **Glassmorphism UI:** Modern look using semi-transparent backgrounds and blurs.
 - **Contact Integration:** Easy access to social profiles and resume.
 
 ## 🤝 Contact
 - **GitHub:** [@NashraHusain](https://github.com/NashraHusain)
-- **Email:** [Your Email Here]
+- **Email:** [nashrakashaf@gmial.com]
 - **Location:** Amravati, Maharashtra
