@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nashra Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F3ECE7;
+      --card: #E8DAD5;
+      --text: #2F2F2F;
+      --accent: #955C9D;
+      --highlight: #E87D7D;
+      --header-bg: #7B3E66;
+    }
+
+    body.dark-mode {
+      --bg: #1a1a1a;
+      --card: #2a2a2a;
+      --text: #f0f0f0;
+      --accent: #FF6F61;
+      --highlight: #FFD166;
+      --header-bg: #000000;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: all 0.4s ease;
+    }
+
+    header {
+      background: var(--header-bg);
+      color: #fff;
+      padding: 25px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--highlight);
+    }
+
+    .toggle-theme {
+      margin-top: 10px;
+      padding: 8px 16px;
+      border: none;
+      background: var(--highlight);
+      color: #000;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+      border-left: 6px solid var(--highlight);
+      padding-left: 14px;
+    }
+
+    .box {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+    }
+
+    .about {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .about img {
+      width: 240px;
+      height: 280px;
+      border-radius: 16px;
+      object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      border: 4px solid var(--highlight);
+    }
+
+    .skills span {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px 16px;
+      background: var(--highlight);
+      color: #000;
+      border-radius: 14px;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    .grid-2, .grid-3 {
+      display: grid;
+      gap: 20px;
+    }
+
+    .grid-2 { grid-template-columns: 1fr 1fr; }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+    footer {
+      background: var(--header-bg);
+      color: var(--text);
+      padding: 24px;
+      text-align: center;
+      border-top: 2px solid var(--highlight);
+    }
+
+    .cert-badge {
+      position: fixed;
+      top: 50%;
+      right: -140px;
+      transform: translateY(-50%);
+      background: linear-gradient(135deg, var(--accent), var(--highlight));
+      color: #fff;
+      padding: 14px 26px;
+      border-radius: 10px 0 0 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-decoration: none;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      z-index: 999;
+      cursor: pointer;
+      animation: slideIn 1.2s ease-out 0.8s forwards, glow 3s ease-in-out infinite;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .cert-badge:hover {
+      transform: translateY(-50%) scale(1.05);
+      box-shadow: 0 0 25px var(--highlight), 0 0 10px rgba(0,0,0,0.2);
+      background: linear-gradient(135deg, var(--highlight), var(--accent));
+    }
+
+    @keyframes slideIn {
+      0% { right: -140px; opacity: 0; }
+      100% { right: 0; opacity: 1; }
+    }
+
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 0 15px var(--highlight); }
+      50% { box-shadow: 0 0 25px var(--accent), 0 0 40px var(--highlight); }
+    }
+
+    @media (max-width: 768px) {
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .about { flex-direction: column; text-align: center; }
+      .cert-badge { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nashra Kashaf Husain</h1>
+    <nav>
+      <a href=\"#about\">About</a>
+      <a href=\"#skills\">Skills</a>
+      <a href=\"#projects\">Projects</a>
+      <a href=\"#experience\">Experience</a>
+      <a href=\"#education\">Education</a>
+      <a href=\"#certifications\">Certificates</a>
+      <a href=\"#contact\">Contact</a>
+    </nav>
+    <button class=\"toggle-theme\" onclick=\"toggleMode()\">Toggle Mode</button>
+  </header>
+
+  <main class=\"container\">
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="box about">
+          <img src="your-photo.jpg" alt="Nashra's Photo">
+          <div>
+            <p>Hey there! 👋 I’m <strong>Nashra Kashaf Husain</strong>, a frontend-focused Computer Science student with a passion for designing vibrant, functional, and elegant web applications. Whether it's HTML, CSS, JavaScript or Java-based systems — I love building things that wow users and solve real-world problems.</p>
+          </div>
+        </div>
+      </section>
+  
+      <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="box skills">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Advanced Java</span><span>Python</span>
+          <span>SQL</span><span>Node.js</span><span>JSP</span><span>Blockchain</span><span>AI/ML</span>
+          <span>DBMS</span><span>Leadership</span><span>UI/UX Design</span>
+        </div>
+      </section>
+  
+      <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="grid-3">
+          <div class="box">
+            <h3>Toy Library System</h3>
+            <p>Developed in Advanced Java using JSP & JDBC. A complete toy rental system with user login and return management.</p>
+          </div>
+          <div class="box">
+            <h3>Car Racing Game</h3>
+            <p>2D game in C++ with basic physics, key events, and speed variation. Fully interactive for game lovers.</p>
+          </div>
+          <div class="box">
+            <h3>Tic Tac Toe</h3>
+            <p>Console-based game in C++ with smart win-check logic, reset and replay functionality.</p>
+          </div>
+        </div>
+      </section>
+  
+      <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="grid-2">
+          <div class="box">
+            <h3>Java Intern – JK Innovative Pvt. Ltd.</h3>
+            <p>Led a 3-month project team, building a Java-based application from scratch. Mastered backend logic + frontend integration.</p>
+          </div>
+          <div class="box">
+            <h3>Art + Graphic Design Roles</h3>
+            <p>Visual storytelling at Sundara Design Co., Prem Rekhaen, and Kala Aaj. Translated ideas into compelling digital design.</p>
+          </div>
+        </div>
+      </section>
+  
+      <section id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="grid-2">
+          <div class="box">
+            <h3>B.E. in Computer Science</h3>
+            <p>HVPM COET – CGPA: 8.91</p>
+          </div>
+          <div class="box">
+            <h3>HSC – 89.33%</h3>
+            <p>Saifee Jubilee Jr. College (2021)</p>
+            <h3>SSC – 71.40%</h3>
+            <p>Saifee Jubilee High School (2019)</p>
+          </div>
+        </div>
+      </section>
+  
+      <section id="certifications">
+        <h2 class="section-title">Certifications</h2>
+        <div class="box">
+          <ul>
+            <li>✔️ Java Programming Language Certificate – Oct 2024</li>
+            <li>✔️ Python Programming Language Certificate – Dec 2024</li>
+            <li>✔️ C++ Programming Certification – Oct 2023</li>
+            <li>✔️ Microsoft AI Skills Challenge – Jan 2024</li>
+            <li>✔️ AI Workshop: Build Your Own Gen AI – NxtWave – July 2024</li>
+            <li>✔️ LPF Scholar (Lila Girl 2021) – Covered AI, ML, IoT, Networking</li>
+            <li>✔️ edGICT Badges:
+              <ul>
+                <li>• Introduction to AI/ML – Dec 2023</li>
+                <li>• Introduction to IoT – Feb 2024</li>
+                <li>• Introduction to Big Data – Feb 2024</li>
+                <li>• Introduction to Python – Feb 2024</li>
+              </ul>
+            </li>
+            <li>✔️ Coordinator Certificate – “Sab Khelo Sab Jeeto” at EUPHORIA 2K24 – Jan 2024</li>
+            <li>✔️ Certificate of Appreciation – Best in Class 12 – Feb 2021</li>
+          </ul>
+        </div>
+      </section>
+  
+      <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="box">
+          <p><strong>Email:</strong> <a href="mailto:nashrakashaf@gmail.com">nashrakashaf@gmail.com</a></p>
+          <p><strong>Phone:</strong> 8624946787</p>
+          <p><strong>Languages:</strong> Hindi, English, Urdu, Marathi (Basic)</p>
+        </div>
+      </section>
+    </main>
+  
+    <!-- 🔥 Glowing Certification Badge -->
+    <a href="#certifications" class="cert-badge" title="Click to view my proudest achievements!" aria-label="Certifications Section">
+      🏅 <strong>My Badges</strong>
+    </a>
+  
+    <footer>
+      <p>&copy; 2025 Nashra Kashaf Husain — Crafted with 💖 using HTML + CSS</p>
+    </footer>
+  
+    <script>
+      function toggleMode() {
+        document.body.classList.toggle('dark-mode');
+      }
+    </script>
+  </body>
+  </html>
+  
