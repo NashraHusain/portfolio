@@ -34,7 +34,7 @@ const captionText = document.getElementById('certCaption');
 
 const certImages = {
     'cert1': { 
-        src: 'frontend_Certificate.pdf', 
+        src: 'frontend_certificate.pdf', 
         caption: 'Introduction to Front End Development - Simplilearn' 
     },
     'cert2': { 
@@ -149,3 +149,4 @@ let startY;
         }
     });
 });
+
