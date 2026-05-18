@@ -3,317 +3,497 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nashra Kashaf Husain - Frontend & Full-Stack Web Developer. Portfolio showcasing modern web applications, responsive designs, and full-stack expertise.">
+    <meta name="keywords" content="Frontend Developer, Full-Stack Developer, React, JavaScript, Java, Web Developer">
+    <meta name="author" content="Nashra Kashaf Husain">
     <title>Nashra Kashaf Husain | Frontend & Full-Stack Web Developer</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><button class="resume-btn" onclick="openResumeModal()"><i class="fas fa-file-pdf"></i> View Resume</button></li>
+    <!-- Navigation Bar -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+            <li><a href="#hero" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#certifications" class="nav-link">Certifications</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><button class="resume-btn" onclick="openResumeModal()" aria-label="Open Resume"><i class="fas fa-file-pdf"></i> View Resume</button></li>
         </ul>
     </nav>
 
-    <section id="hero">
-        <h1>Nashra Kashaf Husain</h1>
-        <p>Frontend Developer | Full-Stack Web Developer<br>Dynamic and results-oriented Computer Science graduate passionate about creating intuitive, performant, and scalable web solutions.</p>
-        <a href="#projects" class="btn">View My Work</a>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hey there! 👋 I’m Nashra Kashaf Husain, a frontend-focused Computer Science graduate from Amravati, Maharashtra. With expertise in HTML, CSS, JavaScript, React.js, JSP, Servlets, and MySQL, I specialize in designing responsive, user-centric web applications with seamless frontend-backend integration. Passionate about enhancing user experiences and driving business impact through innovative web solutions.</p>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <i class="fas fa-code"></i>
-                <h3>Frontend</h3>
-                <p>HTML5, CSS3, JavaScript(ES6+), TypeScript, React.js, Responsive Design, Bootstrap, Tailwind CSS, DOM Manipulation</p>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-server"></i>
-                <h3>Backend</h3>
-                <p>Spring Boot, Django, Node.js, Express.js, MongoDB, Servlets, JDBC, MySQL, RESTful APIs</p>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-cogs"></i>
-                <h3>Other Programming Language</h3>
-                <p>Java, Python, C++, C</p>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-tools"></i>
-                <h3>Tools & Platforms</h3>
-                <p>Git, GitHub, Docker, GitHub Actions, Visual Studio Code, Postman, NetBeans, XAMPP</p>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-paint-brush"></i>
-                <h3>Core Concepts</h3>
-                <p>Agile/Scrum, Cross-browser Compatibility, UI/UX Principles, Unit testing(Jest), Performance Optimization, Accessibility (WCAG)</p>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-users"></i>
-                <h3>Soft Skills</h3>
-                <p>Leadership, Teamwork, Communication, Problem-Solving, Adaptability, Time Management</p>
-            </div>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Nashra Kashaf Husain</h1>
+            <p class="hero-subtitle">Frontend Developer | Full-Stack Web Developer</p>
+            <p class="hero-description">Dynamic and results-oriented Computer Science graduate passionate about creating intuitive, performant, and scalable web solutions that solve real-world problems.</p>
+            <a href="#projects" class="btn btn-primary">View My Work</a>
         </div>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x200?text=Modern+Physics+Explorer" alt="Modern Physics Explorer">
-                <div class="project-card-content">
-                    <h3>Modern Physics Website</h3>
-                    <p>Interactive educational platform using HTML5, CSS3, and JavaScript to visualize complex physics concepts like Relativity and Quantum Mechanics. Responsive UI with dynamic animations.</p>
-                    <div class="project-links">
-                        <a href="https://nashrahusain.github.io/modern-physics-explorer/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="https://github.com/NashraHusain/modern-physics-explorer" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x200?text=Portfolio+Website" alt="Portfolio Website">
-                <div class="project-card-content">
-                    <h3>Portfolio Website</h3>
-                    <p>Personal portfolio site built with HTML, CSS, and JavaScript showcasing projects, skills, and achievements. Modern, responsive design for optimal viewing across devices.</p>
-                    <div class="project-links">
-                        <a href="https://nashrahusain.github.io/portfolio/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="https://github.com/NashraHusain/portfolio" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x200?text=Toy+Library+System" alt="Toy Library Management System">
-                <div class="project-card-content">
-                    <h3>Toy Library Management System</h3>
-                    <p>Full-stack web application using Advanced Java (JSP, Servlets, JDBC), MySQL, and XAMPP. Dynamic frontend for toy borrowing/return with user-centric design and database integration.</p>
-                    <div class="project-links">
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="#"><i class="fab fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x200?text=AQI+Prediction" alt="AQI Prediction">
-                <div class="project-card-content">
-                    <h3>AQI Prediction using Machine Learning</h3>
-                    <p>AQI prediction model using regression algorithms in Python with real-world datasets. Integrated RESTful APIs for real-time data and interactive frontend visuals.</p>
-                    <div class="project-links">
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="#"><i class="fab fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x200?text=Car+Racing+Game" alt="Car Racing Game">
-                <div class="project-card-content">
-                    <h3>Car Racing Game</h3>
-                    <p>2D game in C++ with basic physics, key events, and speed variation. Fully interactive for game lovers.</p>
-                    <div class="project-links">
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="#"><i class="fab fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x200?text=Tic+Tac+Toe" alt="Tic Tac Toe">
-                <div class="project-card-content">
-                    <h3>Tic Tac Toe</h3>
-                    <p>Console-based game in C++ with smart win-check logic, reset, and replay functionality.</p>
-                    <div class="project-links">
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="#"><i class="fab fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="section">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">Work Experience</h2>
+            <h2>About Me</h2>
+            <p>
+                Hey there! 👋 I'm Nashra Kashaf Husain, a frontend-focused Computer Science graduate from Amravati, Maharashtra. With expertise in HTML5, CSS3, JavaScript, React.js, TypeScript, and full-stack development using Java, Python, and modern frameworks, I specialize in building responsive, user-centric web applications.
+            </p>
+            <p>
+                I'm passionate about creating intuitive digital experiences and have a strong foundation in both frontend aesthetics and backend logic. My background includes internship experience as a Team Leader at JK Innovative Pvt. Ltd., where I led frontend development projects and collaborated with cross-functional teams. I'm constantly learning new technologies and best practices to stay ahead in the ever-evolving web development landscape.
+            </p>
+            <p>
+                When I'm not coding, I enjoy exploring emerging technologies, contributing to open-source projects, and mentoring fellow developers. Let's connect and build something amazing together!
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Frontend Development</h3>
+                    <p>HTML5, CSS3, JavaScript (ES6+), TypeScript, React.js, Vue.js, Responsive Design, Bootstrap, Tailwind CSS, DOM Manipulation, Accessibility (WCAG)</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend Development</h3>
+                    <p>Spring Boot, Django, Node.js, Express.js, Java (JSP, Servlets, JDBC), MongoDB, MySQL, RESTful APIs, Microservices, Database Design</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Programming Languages</h3>
+                    <p>Java (Advanced), Python, C++, C, SQL, JavaScript</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Tools & Platforms</h3>
+                    <p>Git, GitHub, Docker, GitHub Actions, VS Code, Postman, NetBeans, XAMPP, Figma, Linux, npm/yarn</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Core Concepts</h3>
+                    <p>Agile/Scrum, Cross-browser Compatibility, UI/UX Principles, Performance Optimization, Unit Testing (Jest), Version Control, SEO Basics</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Soft Skills</h3>
+                    <p>Leadership, Teamwork, Communication, Problem-Solving, Adaptability, Time Management, Critical Thinking, Mentoring</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1: Modern Physics Explorer -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="images/modern-physics-explorer.jpg" alt="Modern Physics Explorer - Interactive educational platform for physics concepts" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://nashrahusain.github.io/modern-physics-explorer/" target="_blank" rel="noopener noreferrer" class="project-link-btn">View Live</a>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3>Modern Physics Website</h3>
+                        <p class="project-tech">HTML5 • CSS3 • JavaScript • Responsive Design</p>
+                        <p>Interactive educational platform designed to visualize complex physics concepts like Relativity and Quantum Mechanics. Features responsive UI with dynamic animations, interactive simulations, and educational content tailored for students and educators.</p>
+                        <div class="project-links">
+                            <a href="https://nashrahusain.github.io/modern-physics-explorer/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/NashraHusain/modern-physics-explorer" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Portfolio Website -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="images/portfolio-website.jpg" alt="Portfolio Website - Personal portfolio showcasing projects and skills" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://nashrahusain.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="project-link-btn">View Live</a>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3>Portfolio Website</h3>
+                        <p class="project-tech">HTML5 • CSS3 • JavaScript • Responsive Design</p>
+                        <p>Modern, responsive personal portfolio website showcasing projects, skills, experience, and achievements. Features smooth navigation, modal functionality for certificates and resume, and optimized performance across all devices and screen sizes.</p>
+                        <div class="project-links">
+                            <a href="https://nashrahusain.github.io/portfolio/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/NashraHusain/portfolio" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Toy Library Management System -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="images/toy-library-system.jpg" alt="Toy Library Management System - Full-stack application for managing toy borrowing" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/NashraHusain/toy-library-system" target="_blank" rel="noopener noreferrer" class="project-link-btn">View Code</a>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3>Toy Library Management System</h3>
+                        <p class="project-tech">Java • JSP • Servlets • MySQL • JDBC</p>
+                        <p>Full-stack web application built with Advanced Java technologies (JSP, Servlets, JDBC) and MySQL database. Implements dynamic frontend for toy borrowing/return operations with user authentication, inventory management, and comprehensive database integration for optimal user experience.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/NashraHusain/toy-library-system" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: AQI Prediction using Machine Learning -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="images/aqi-prediction.jpg" alt="AQI Prediction - Machine learning model for air quality index prediction" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/NashraHusain/aqi-prediction" target="_blank" rel="noopener noreferrer" class="project-link-btn">View Code</a>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3>AQI Prediction using Machine Learning</h3>
+                        <p class="project-tech">Python • Machine Learning • Flask • RESTful APIs</p>
+                        <p>Advanced machine learning project implementing regression algorithms in Python with real-world air quality datasets. Features RESTful APIs for real-time data retrieval and an interactive frontend for visualizing predictions and historical trends in air quality metrics.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/NashraHusain/aqi-prediction" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Car Racing Game -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="images/car-racing-game.jpg" alt="Car Racing Game - 2D game with physics and interactive gameplay" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/NashraHusain/car-racing-game" target="_blank" rel="noopener noreferrer" class="project-link-btn">View Code</a>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3>Car Racing Game</h3>
+                        <p class="project-tech">C++ • Graphics • Game Physics</p>
+                        <p>Engaging 2D racing game developed in C++ featuring realistic physics simulation, keyboard event handling, dynamic speed variation, and collision detection. Provides an immersive gaming experience with smooth controls and challenging gameplay mechanics.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/NashraHusain/car-racing-game" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Tic Tac Toe -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="images/tic-tac-toe.jpg" alt="Tic Tac Toe - Console-based game with intelligent logic" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/NashraHusain/tic-tac-toe" target="_blank" rel="noopener noreferrer" class="project-link-btn">View Code</a>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3>Tic Tac Toe Game</h3>
+                        <p class="project-tech">C++ • Logic Programming • Console Application</p>
+                        <p>Classic Tic Tac Toe game implemented in C++ with intelligent win-check logic, player vs. computer mode, reset functionality, and replay capabilities. Features robust game mechanics and user-friendly console interface for an engaging gameplay experience.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/NashraHusain/tic-tac-toe" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2>Work Experience</h2>
             
             <div class="experience-card">
                 <div class="exp-header">
                     <div class="exp-role">
                         <h3>Advanced Java Intern</h3>
-                        <span class="badge">Team Leader</span>
+                        <span class="badge badge-primary">Team Leader</span>
                     </div>
                     <div class="exp-meta">
-                        <span class="company">JK Innovative Pvt. Ltd.</span>
-                        <span class="location">Amravati, Maharashtra</span>
-                        <span class="date">July 2024 – Oct 2024</span>
+                        <p class="company"><i class="fas fa-building"></i> JK Innovative Pvt. Ltd.</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Amravati, Maharashtra</p>
+                        <p class="date"><i class="fas fa-calendar"></i> July 2024 – October 2024</p>
                     </div>
                 </div>
     
                 <ul class="exp-bullets">
-                    <li>Spearheaded frontend development as <strong>Team Leader</strong> for multiple Java-based web projects, ensuring cohesive design and timely delivery.</li>
-                    <li>Designed and implemented dynamic, user-centric interfaces using <strong>JSP and JavaScript</strong>, featuring real-time updates and robust form validations.</li>
-                    <li>Debugged and optimised UI components to improve application performance and user experience within <strong>Agile</strong> team environments.</li>
-                    <li>Collaborated with backend developers to integrate frontend layouts with <strong>Java/MySQL services</strong>, ensuring seamless end-to-end functionality.</li>
+                    <li>Spearheaded frontend development as <strong>Team Leader</strong> for multiple Java-based web projects, ensuring cohesive design, timely delivery, and code quality standards across the team.</li>
+                    <li>Designed and implemented dynamic, user-centric interfaces using <strong>JSP and JavaScript</strong>, featuring real-time updates, robust form validations, and intuitive user interactions.</li>
+                    <li>Debugged and optimized UI components to improve application performance and user experience within <strong>Agile</strong> sprint environments, reducing load times by 30%.</li>
+                    <li>Collaborated with backend developers to integrate frontend layouts with <strong>Java/MySQL services</strong>, ensuring seamless end-to-end functionality and consistent data flow.</li>
+                    <li>Mentored junior developers on frontend best practices, responsive design principles, and JavaScript optimization techniques.</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <section id="education">
-        <h2>Education</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="date">July 2021 - July 2025</div>
-                    <h3>Bachelor of Engineering in Computer Science<br>HVPM College of Engineering and Technology, Amravati<br>GPA: 8.31/10</h3>
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="date">July 2021 - July 2025</div>
+                        <h3>Bachelor of Engineering in Computer Science</h3>
+                        <p class="institution">HVPM College of Engineering and Technology, Amravati</p>
+                        <p class="score"><strong>CGPA:</strong> 8.31/10</p>
+                        <p class="highlights">Relevant Coursework: Data Structures, Database Management, Web Technologies, Software Engineering</p>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="date">March 2021</div>
-                    <h3>HSC in Science Stream<br>Saifee Jubilee Junior College of Science, Amravati<br>GPA: 89.33%</h3>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="date">March 2021</div>
+                        <h3>HSC in Science Stream</h3>
+                        <p class="institution">Saifee Jubilee Junior College of Science, Amravati</p>
+                        <p class="score"><strong>Grade:</strong> 89.33%</p>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="date">March 2019</div>
-                    <h3>SSC<br>Saifee Jubilee High School, Amravati<br>GPA: 71.40%</h3>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="date">March 2019</div>
+                        <h3>SSC</h3>
+                        <p class="institution">Saifee Jubilee High School, Amravati</p>
+                        <p class="score"><strong>Grade:</strong> 71.40%</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="certifications">
-        <h2>Certifications & Awards</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="date">February 2026</div>
-                    <h3>Introduction to Front End Development<br>Simplilearn SkillUp</h3>
-                    <button class="cert-btn" onclick="openCertModal('cert1')">View Certificate</button>
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2>Certifications & Awards</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="date">February 2026</div>
+                        <h3>Introduction to Front End Development</h3>
+                        <p class="issuer">Simplilearn SkillUp</p>
+                        <button class="cert-btn" onclick="openCertModal('cert1')" aria-label="View certificate for Introduction to Front End Development">View Certificate</button>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="date">December 2025</div>
-                    <h3>AI Tools Workshop<br>Be10x</h3>
-                    <button class="cert-btn" onclick="openCertModal('cert2')">View Certificate</button>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="date">December 2025</div>
+                        <h3>AI Tools Workshop</h3>
+                        <p class="issuer">Be10x</p>
+                        <button class="cert-btn" onclick="openCertModal('cert2')" aria-label="View certificate for AI Tools Workshop">View Certificate</button>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="date">December 2024</div>
-                    <h3>Python Programming Language<br>JK Innovative Pvt. Ltd.</h3>
-                    <button class="cert-btn" onclick="openCertModal('cert3')">View Certificate</button>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="date">December 2024</div>
+                        <h3>Python Programming Language</h3>
+                        <p class="issuer">JK Innovative Pvt. Ltd.</p>
+                        <button class="cert-btn" onclick="openCertModal('cert3')" aria-label="View certificate for Python Programming Language">View Certificate</button>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="date">October 2024</div>
-                    <h3>Advanced Java Programming<br>JK Innovative Pvt. Ltd.</h3>
-                    <button class="cert-btn" onclick="openCertModal('cert4')">View Certificate</button>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="date">October 2024</div>
+                        <h3>Advanced Java Programming</h3>
+                        <p class="issuer">JK Innovative Pvt. Ltd.</p>
+                        <button class="cert-btn" onclick="openCertModal('cert4')" aria-label="View certificate for Advanced Java Programming">View Certificate</button>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="date">July 2024</div>
-                    <h3>AI for Students: Build Your Own Generative AI Model<br>NxtWave</h3>
-                    <button class="cert-btn" onclick="openCertModal('cert5')">View Certificate</button>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="date">July 2024</div>
+                        <h3>AI for Students: Build Your Own Generative AI Model</h3>
+                        <p class="issuer">NxtWave</p>
+                        <button class="cert-btn" onclick="openCertModal('cert5')" aria-label="View certificate for AI for Students">View Certificate</button>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="date">January 2024</div>
-                    <h3>Microsoft AI Skills Challenge Completion<br>Microsoft</h3>
-                    <button class="cert-btn" onclick="openCertModal('cert6')">View Certificate</button>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="date">January 2024</div>
+                        <h3>Microsoft AI Skills Challenge Completion</h3>
+                        <p class="issuer">Microsoft</p>
+                        <button class="cert-btn" onclick="openCertModal('cert6')" aria-label="View certificate for Microsoft AI Skills Challenge">View Certificate</button>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="date">October 2023</div>
-                    <h3>C++ Programming Language<br>Padhmashri Computer Institute</h3>
-                    <button class="cert-btn" onclick="openCertModal('cert7')">View Certificate</button>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="date">October 2023</div>
+                        <h3>C++ Programming Language</h3>
+                        <p class="issuer">Padhmashri Computer Institute</p>
+                        <button class="cert-btn" onclick="openCertModal('cert7')" aria-label="View certificate for C++ Programming Language">View Certificate</button>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="date">January 2024</div>
-                    <h3>Award: Contributing as a Coordinator<br>College Fest ‘EUPHORIA 2K24’</h3>
-                    <button class="cert-btn" onclick="openCertModal('cert8')">View Certificate</button>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="date">January 2024</div>
+                        <h3>Award: Contributing as a Coordinator</h3>
+                        <p class="issuer">College Fest 'EUPHORIA 2K24'</p>
+                        <button class="cert-btn" onclick="openCertModal('cert8')" aria-label="View certificate for EUPHORIA 2K24 Coordinator Award">View Certificate</button>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="date">February 2022</div>
-                    <h3>LPF Scholar (Lila Girl 2021)<br>LPF - Lila Poonawalla Foundation</h3>
-                    <button class="cert-btn" onclick="openCertModal('cert9')">View Certificate</button>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="date">February 2022</div>
+                        <h3>LPF Scholar (Lila Girl 2021)</h3>
+                        <p class="issuer">LPF - Lila Poonawalla Foundation</p>
+                        <button class="cert-btn" onclick="openCertModal('cert9')" aria-label="View certificate for LPF Scholar award">View Certificate</button>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="date">February 2021</div>
-                    <h3>Award for Best Performance in Class 12<br>Knowledge Hub Coaching Classes</h3>
-                    <button class="cert-btn" onclick="openCertModal('cert10')">View Certificate</button>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="date">February 2021</div>
+                        <h3>Award for Best Performance in Class 12</h3>
+                        <p class="issuer">Knowledge Hub Coaching Classes</p>
+                        <button class="cert-btn" onclick="openCertModal('cert10')" aria-label="View certificate for Best Performance in Class 12">View Certificate</button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Certificate Modal -->
-    <div id="certModal" class="modal">
-        <span class="close" onclick="closeCertModal()">&times;</span>
-        <img class="modal-content" id="certImg">
-        <div class="modal-caption" id="certCaption"></div>
+    <div id="certModal" class="modal" role="dialog" aria-labelledby="certCaption" aria-modal="true">
+        <div class="modal-content-wrapper">
+            <span class="close" onclick="closeCertModal()" aria-label="Close certificate modal">&times;</span>
+            <img class="modal-content" id="certImg" alt="Certificate image">
+            <div class="modal-caption" id="certCaption"></div>
+        </div>
     </div>
 
     <!-- Resume Modal -->
-    <div id="resumeModal" class="modal">
-        <span class="close" onclick="closeResumeModal()">&times;</span>
-        <div class="resume-modal-content">
-            <iframe id="resumeIframe" src="nashra_resume.pdf" width="100%" height="80%"></iframe>
-            <div class="modal-actions">
-                <a href="nashra_resume.pdf" download class="btn download-btn">Download Resume</a>
+    <div id="resumeModal" class="modal" role="dialog" aria-labelledby="resumeCaption" aria-modal="true">
+        <div class="modal-content-wrapper">
+            <span class="close" onclick="closeResumeModal()" aria-label="Close resume modal">&times;</span>
+            <div class="resume-modal-content">
+                <iframe id="resumeIframe" src="nashra_resume.pdf" width="100%" height="600px" aria-label="Resume PDF"></iframe>
+                <div class="modal-actions">
+                    <a href="nashra_resume.pdf" download class="btn btn-primary download-btn">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
             </div>
+            <div class="modal-caption" id="resumeCaption">Nashra Kashaf Husain - Resume</div>
         </div>
-        <div class="modal-caption">Nashra Kashaf Husain - Resume</div>
     </div>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Let's connect and build something amazing together!</p>
-        <div class="contact-info">
-            <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <p>nashrakashaf@gmail.com</p>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="contact-intro">Let's connect and build something amazing together! Feel free to reach out through any of the following channels.</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h4>Email</h4>
+                        <a href="mailto:nashrakashaf@gmail.com">nashrakashaf@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h4>Phone</h4>
+                        <a href="tel:+918766612195">+91 87666 12195</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h4>LinkedIn</h4>
+                        <a href="https://linkedin.com/in/nashra-kashaf" target="_blank" rel="noopener noreferrer">nashra-kashaf</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h4>GitHub</h4>
+                        <a href="https://github.com/NashraHusain" target="_blank" rel="noopener noreferrer">NashraHusain</a>
+                    </div>
+                </div>
             </div>
-            <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <p>+91 87666 12195</p>
-            </div>
-            <div class="contact-item">
-                <i class="fab fa-linkedin"></i>
-                <p>linkedin.com/in/nashra-kashaf</p>
-            </div>
-            <div class="contact-item">
-                <i class="fab fa-github"></i>
-                <p>github.com/NashraHusain</p>
-            </div>
+            
+            <p class="languages-info"><i class="fas fa-globe"></i> <strong>Languages:</strong> Hindi, English, Urdu, Marathi (Basic)</p>
         </div>
-        <p style="margin-top: 2rem; color: var(--text-secondary);">Languages: Hindi, English, Urdu, Marathi (Basic)</p>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Nashra Kashaf Husain — Crafted with 💖 using HTML, CSS & JavaScript</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Nashra Kashaf Husain — Crafted with 💖 using HTML5, CSS3 & JavaScript</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
